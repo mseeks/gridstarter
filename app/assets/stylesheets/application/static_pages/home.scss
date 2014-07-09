@@ -1,0 +1,11 @@
+// Styles specific to StaticPagesController#home
+
+@import "bourbon";
+@import "variables";
+
+body.static-pages.home {
+  h1 {
+    margin: 2em auto;
+    text-align: center;
+  }
+}

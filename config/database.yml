@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: boink_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: boink_test
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: boink_production
+  host: localhost

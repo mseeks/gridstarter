@@ -1,0 +1,45 @@
+@import "bourbon";
+@import "variables";
+@import "neat";
+
+body.confirmations,
+body.passwords,
+body.registrations,
+body.sessions,
+body.unlocks {
+  main {
+    @include outer-container;
+    max-width: 500px;
+    padding: 1em;
+  }
+
+  main form {
+    & > div {
+      margin-bottom: 0.8em;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 0.5em;
+    }
+
+    a {
+      color: lighten($base-font-color, 50%);
+      font-size: 0.8em;
+      margin-left: 4px;
+      text-decoration: none;
+
+      &:hover {
+        color: $base-accent-color;
+      }
+    }
+
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  .devise-links {
+    text-align: center;
+  }
+}
