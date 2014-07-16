@@ -18,10 +18,10 @@ guard :rspec do
   watch(%r{^app/views/(.+)/.*.(erb|haml|slim)$})     { |m| "spec/features/#{m[1]}_spec.rb" }
 end
 
-guard :teaspoon do
-  # Implementation files
-  watch(%r{app/assets/javascripts/(.+).js}) { |m| "#{m[1]}_spec.js" }
-
-  # Specs / Helpers
-  watch(%r{spec/javascripts/(.*)})
-end
+# guard :teaspoon do
+#   # Implementation files
+#   watch(%r{app/assets/javascripts/(.+).js}) { |m| "#{m[1]}_spec.js" }
+#
+#   # Specs / Helpers
+#   watch(%r{spec/javascripts/(.*)})
+# end

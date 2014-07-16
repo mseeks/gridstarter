@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.digitalocean.com/v2/droplets/2077137
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 9274ea1ff9637daaf826e0c06c8387158141168e6a6225654a650e4ddbe1eeb7
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 13 Jul 2014 20:33:11 GMT
+      Content-Type:
+      - application/octet-stream
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4a7ed861d54e50e103e18f0f8b70b7ba1405283590934; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 204 No Content
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1190'
+      Ratelimit-Reset:
+      - '1405285645'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - dcde9339246bfa648dce3986e55a6a6d
+      X-Runtime:
+      - '0.100521'
+      X-Rack-Cache:
+      - invalidate, pass
+      Cf-Ray:
+      - 1498410b5b3b0167-ORD
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 13 Jul 2014 20:33:11 GMT
+recorded_with: VCR 2.9.2

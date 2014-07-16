@@ -1,7 +1,7 @@
 @import "bourbon";
 
 // Typography
-$sans-serif: $helvetica;
+$sans-serif: 'Roboto';
 $serif: $georgia;
 
 $base-font-family: $sans-serif;
@@ -16,7 +16,7 @@ $base-border-radius: em(3);
 $base-body-color: #fff;
 
 // Font Colors
-$base-font-color: #3e3e3e;
+$base-font-color: #282a36;
 $base-accent-color: #df0061;
 
 // Text Link Colors

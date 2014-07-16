@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.digitalocean.com/v2/droplets
+    body:
+      encoding: UTF-8
+      string: '{"name":"362-181","region":"nyc2","size":"512mb","image":"ubuntu-14-04-x64"}'
+    headers:
+      Authorization:
+      - Bearer 9274ea1ff9637daaf826e0c06c8387158141168e6a6225654a650e4ddbe1eeb7
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 13 Jul 2014 20:33:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d30612f3002761d7320435e92c5ce14d71405283591328; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 202 Accepted
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1189'
+      Ratelimit-Reset:
+      - '1405285645'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5758e22ea8b28a516e1f513606140846
+      X-Runtime:
+      - '0.359498'
+      X-Rack-Cache:
+      - invalidate, pass
+      Cf-Ray:
+      - 1498410dcb530167-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "droplet":{
+            "id":2077182,
+            "name":"362-181",
+            "region":{
+              "slug":"nyc2",
+              "name":"New York 2",
+              "sizes":[
+                "1gb",
+                "2gb",
+                "4gb",
+                "8gb",
+                "16gb",
+                "32gb",
+                "48gb",
+                "64gb",
+                "512mb"
+              ],
+              "available":true,
+              "features":[
+                "virtio",
+                "private_networking",
+                "backups"
+              ]
+            },
+            "image":{
+              "id":3240036,
+              "name":"Ubuntu 14.04 x64",
+              "distribution":"Ubuntu",
+              "slug":"ubuntu-14-04-x64",
+              "public":true,
+              "regions":[
+                "nyc1",
+                "ams1",
+                "sfo1",
+                "nyc2",
+                "ams2",
+                "sgp1",
+                "lon1"
+              ],
+              "created_at":"2014-04-18T15:59:36Z"
+            },
+            "size":{
+              "slug":"512mb",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
+              "transfer":1000,
+              "price_monthly":"5.0",
+              "price_hourly":"0.00744",
+              "regions":[
+                "nyc1",
+                "sgp1",
+                "ams1",
+                "ams2",
+                "sfo1",
+                "nyc2"
+              ]
+            },
+            "locked":true,
+            "status":"new",
+            "networks":{},
+            "kernel":{
+              "id":1221,
+              "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
+              "version":"3.13.0-24-generic"
+            },
+            "created_at":"2014-07-13T20:33:11Z",
+            "backup_ids":[],
+            "snapshot_ids":[],
+            "action_ids":[
+              28548387
+            ]
+          },
+          "links":{
+            "actions":[
+              {
+                "id":28548387,
+                "rel":"create",
+                "href":"http://api.digitalocean.com/v2/actions/28548387"
+              }
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 13 Jul 2014 20:33:11 GMT
+recorded_with: VCR 2.9.2

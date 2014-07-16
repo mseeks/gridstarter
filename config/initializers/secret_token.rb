@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Boink::Application.config.secret_key_base = ENV["SECRET_TOKEN"]
+Gridstarter::Application.config.secret_key_base = ENV["SECRET_TOKEN"]

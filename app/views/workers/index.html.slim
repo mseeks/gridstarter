@@ -1,0 +1,14 @@
+h1 Workers
+
+- unless @workers.empty?
+  table
+    thead
+      tr
+        th uid
+        th Project
+    tbody
+      - @workers.each do |worker|
+        tr
+          td = worker.uid
+          td = worker.project.name
+          
