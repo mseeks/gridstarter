@@ -1,4 +1,5 @@
 # Gridstarter
+[![Travis Badge](https://travis-ci.org/msull92/gridstarter.svg?branch=master)](https://travis-ci.org/msull92/gridstarter)
 
 ## Requirements
 
