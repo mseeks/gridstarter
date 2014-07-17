@@ -7,11 +7,26 @@ class Worker < ActiveRecord::Base
   after_create :spin_up!
   before_destroy :rip_down!
   
-  # Destroys the worker instance based on provider and uid
-  def rip_down!
+  # Returns true if the droplet is active(finished spinning up)
+  # @return [Boolean] true if active
+  def active?
     case self.provider
       when "digital_ocean"
-        DigitalOcean.droplet.destroy(self.uid)
+        DigitalOcean.droplet.show(self.uid).droplet.status == "active"
+    end
+  end
+  
+  # Destroys the worker instance based on provider and uid
+  def rip_down!
+    if self.active?
+      sleep(10)
+      case self.provider
+        when "digital_ocean"
+          DigitalOcean.droplet.destroy(self.uid)
+      end
+    else
+      sleep(10)
+      self.rip_down!
     end
   end
   

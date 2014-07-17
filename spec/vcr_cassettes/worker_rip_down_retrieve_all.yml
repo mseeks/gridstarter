@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 9274ea1ff9637daaf826e0c06c8387158141168e6a6225654a650e4ddbe1eeb7
+      - Bearer <TOKEN>
       Content-Type:
       - application/json
       User-Agent:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sun, 13 Jul 2014 20:35:12 GMT
+      - Thu, 17 Jul 2014 03:19:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,26 +33,26 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1c2df17687b9bb7f6fa37211290bb43a1405283712607; expires=Mon, 23-Dec-2019
+      - __cfduid=d7497aed724cd7a0d138681a6f390aa941405567149366; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
       - 200 OK
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1187'
+      - '1158'
       Ratelimit-Reset:
-      - '1405285645'
+      - '1405569875'
       Cache-Control:
       - must-revalidate, private, max-age=0
       X-Request-Id:
-      - 2199972af93fefbd6384fded8373fa59
+      - 0cde95f831e490c5ace32127475021a4
       X-Runtime:
-      - '0.194769'
+      - '0.146794'
       X-Rack-Cache:
       - miss
       Cf-Ray:
-      - 14984403c83209d0-ORD
+      - 14b34bdb817c09d0-ORD
     body:
       encoding: UTF-8
       string: |
@@ -113,7 +113,8 @@ http_interactions:
                   "ams1",
                   "ams2",
                   "sfo1",
-                  "nyc2"
+                  "nyc2",
+                  "lon1"
                 ]
               },
               "locked":false,
@@ -147,5 +148,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sun, 13 Jul 2014 20:35:12 GMT
+  recorded_at: Thu, 17 Jul 2014 03:19:09 GMT
 recorded_with: VCR 2.9.2

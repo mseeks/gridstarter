@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 9274ea1ff9637daaf826e0c06c8387158141168e6a6225654a650e4ddbe1eeb7
+      - Bearer <TOKEN>
       Content-Type:
       - application/json
       User-Agent:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sun, 13 Jul 2014 20:32:10 GMT
+      - Thu, 17 Jul 2014 03:19:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,26 +33,26 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d6fad040eab4fad9c53af77f32ff2fb9d1405283530413; expires=Mon, 23-Dec-2019
+      - __cfduid=d532e88ab9172e9466f6b2e27e46c7f4c1405567150240; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
       - 200 OK
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1191'
+      - '1156'
       Ratelimit-Reset:
-      - '1405285645'
+      - '1405569875'
       Cache-Control:
       - must-revalidate, private, max-age=0
       X-Request-Id:
-      - cab2abdedc2879eea06937bef887aaed
+      - c887e4501379f92db8de3292a9a5ceee
       X-Runtime:
-      - '0.223018'
+      - '0.129986'
       X-Rack-Cache:
       - miss
       Cf-Ray:
-      - 14983f9115290167-ORD
+      - 14b34be101a409d0-ORD
     body:
       encoding: UTF-8
       string: |
@@ -113,7 +113,8 @@ http_interactions:
                   "ams1",
                   "ams2",
                   "sfo1",
-                  "nyc2"
+                  "nyc2",
+                  "lon1"
                 ]
               },
               "locked":false,
@@ -142,8 +143,8 @@ http_interactions:
               ]
             },
             {
-              "id":2077137,
-              "name":"361-180",
+              "id":2106951,
+              "name":"29-23",
               "region":{
                 "slug":"nyc2",
                 "name":"New York 2",
@@ -196,7 +197,8 @@ http_interactions:
                   "ams1",
                   "ams2",
                   "sfo1",
-                  "nyc2"
+                  "nyc2",
+                  "lon1"
                 ]
               },
               "locked":true,
@@ -207,11 +209,11 @@ http_interactions:
                 "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
                 "version":"3.13.0-24-generic"
               },
-              "created_at":"2014-07-13T20:32:09Z",
+              "created_at":"2014-07-17T03:19:09Z",
               "backup_ids":[],
               "snapshot_ids":[],
               "action_ids":[
-                28548289
+                28780168
               ]
             }
           ],
@@ -220,5 +222,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sun, 13 Jul 2014 20:32:10 GMT
+  recorded_at: Thu, 17 Jul 2014 03:19:10 GMT
 recorded_with: VCR 2.9.2

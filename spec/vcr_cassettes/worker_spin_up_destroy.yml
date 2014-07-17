@@ -1,14 +1,734 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://api.digitalocean.com/v2/droplets/2077137
+    method: get
+    uri: https://api.digitalocean.com/v2/droplets/2106951?per_page=999
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 9274ea1ff9637daaf826e0c06c8387158141168e6a6225654a650e4ddbe1eeb7
+      - Bearer <TOKEN>
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 17 Jul 2014 03:19:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6cd0695925357d131060cc2068fe9e061405567150650; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 200 OK
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1155'
+      Ratelimit-Reset:
+      - '1405569875'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 21156697bd87b7ff954846c94fa74ac4
+      X-Runtime:
+      - '0.092308'
+      X-Rack-Cache:
+      - miss
+      Cf-Ray:
+      - 14b34be394e309d0-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "droplet":{
+            "id":2106951,
+            "name":"29-23",
+            "region":{
+              "slug":"nyc2",
+              "name":"New York 2",
+              "sizes":[
+                "1gb",
+                "2gb",
+                "4gb",
+                "8gb",
+                "16gb",
+                "32gb",
+                "48gb",
+                "64gb",
+                "512mb"
+              ],
+              "available":true,
+              "features":[
+                "virtio",
+                "private_networking",
+                "backups"
+              ]
+            },
+            "image":{
+              "id":3240036,
+              "name":"Ubuntu 14.04 x64",
+              "distribution":"Ubuntu",
+              "slug":"ubuntu-14-04-x64",
+              "public":true,
+              "regions":[
+                "nyc1",
+                "ams1",
+                "sfo1",
+                "nyc2",
+                "ams2",
+                "sgp1",
+                "lon1"
+              ],
+              "created_at":"2014-04-18T15:59:36Z"
+            },
+            "size":{
+              "slug":"512mb",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
+              "transfer":1000,
+              "price_monthly":"5.0",
+              "price_hourly":"0.00744",
+              "regions":[
+                "nyc1",
+                "sgp1",
+                "ams1",
+                "ams2",
+                "sfo1",
+                "nyc2",
+                "lon1"
+              ]
+            },
+            "locked":true,
+            "status":"new",
+            "networks":{
+              "v4":[
+                {
+                  "ip_address":"162.243.253.135",
+                  "netmask":"255.255.255.0",
+                  "gateway":"162.243.253.1",
+                  "type":"public"
+                }
+              ],
+              "v6":[]
+            },
+            "kernel":{
+              "id":1221,
+              "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
+              "version":"3.13.0-24-generic"
+            },
+            "created_at":"2014-07-17T03:19:09Z",
+            "backup_ids":[],
+            "snapshot_ids":[],
+            "action_ids":[
+              28780168
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 17 Jul 2014 03:19:10 GMT
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/droplets/2106951?per_page=999
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 17 Jul 2014 03:19:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d198c6faa4f0fc8a2989fc1503f489ac81405567161476; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 200 OK
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1154'
+      Ratelimit-Reset:
+      - '1405569875'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - cb4bfecb98da3de0e70e3f0d4d5d613a
+      X-Runtime:
+      - '0.086460'
+      X-Rack-Cache:
+      - miss
+      Cf-Ray:
+      - 14b34c27336409d0-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "droplet":{
+            "id":2106951,
+            "name":"29-23",
+            "region":{
+              "slug":"nyc2",
+              "name":"New York 2",
+              "sizes":[
+                "1gb",
+                "2gb",
+                "4gb",
+                "8gb",
+                "16gb",
+                "32gb",
+                "48gb",
+                "64gb",
+                "512mb"
+              ],
+              "available":true,
+              "features":[
+                "virtio",
+                "private_networking",
+                "backups"
+              ]
+            },
+            "image":{
+              "id":3240036,
+              "name":"Ubuntu 14.04 x64",
+              "distribution":"Ubuntu",
+              "slug":"ubuntu-14-04-x64",
+              "public":true,
+              "regions":[
+                "nyc1",
+                "ams1",
+                "sfo1",
+                "nyc2",
+                "ams2",
+                "sgp1",
+                "lon1"
+              ],
+              "created_at":"2014-04-18T15:59:36Z"
+            },
+            "size":{
+              "slug":"512mb",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
+              "transfer":1000,
+              "price_monthly":"5.0",
+              "price_hourly":"0.00744",
+              "regions":[
+                "nyc1",
+                "sgp1",
+                "ams1",
+                "ams2",
+                "sfo1",
+                "nyc2",
+                "lon1"
+              ]
+            },
+            "locked":true,
+            "status":"new",
+            "networks":{
+              "v4":[
+                {
+                  "ip_address":"162.243.253.135",
+                  "netmask":"255.255.255.0",
+                  "gateway":"162.243.253.1",
+                  "type":"public"
+                }
+              ],
+              "v6":[]
+            },
+            "kernel":{
+              "id":1221,
+              "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
+              "version":"3.13.0-24-generic"
+            },
+            "created_at":"2014-07-17T03:19:09Z",
+            "backup_ids":[],
+            "snapshot_ids":[],
+            "action_ids":[
+              28780168
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 17 Jul 2014 03:19:21 GMT
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/droplets/2106951?per_page=999
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 17 Jul 2014 03:19:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d58f0cfa0e4beee2845099db0cfc2e3c31405567171748; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 200 OK
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1153'
+      Ratelimit-Reset:
+      - '1405569875'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - e9434deee53dab1123bf3caedcbcac84
+      X-Runtime:
+      - '0.140113'
+      X-Rack-Cache:
+      - miss
+      Cf-Ray:
+      - 14b34c6760bc0167-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "droplet":{
+            "id":2106951,
+            "name":"29-23",
+            "region":{
+              "slug":"nyc2",
+              "name":"New York 2",
+              "sizes":[
+                "1gb",
+                "2gb",
+                "4gb",
+                "8gb",
+                "16gb",
+                "32gb",
+                "48gb",
+                "64gb",
+                "512mb"
+              ],
+              "available":true,
+              "features":[
+                "virtio",
+                "private_networking",
+                "backups"
+              ]
+            },
+            "image":{
+              "id":3240036,
+              "name":"Ubuntu 14.04 x64",
+              "distribution":"Ubuntu",
+              "slug":"ubuntu-14-04-x64",
+              "public":true,
+              "regions":[
+                "nyc1",
+                "ams1",
+                "sfo1",
+                "nyc2",
+                "ams2",
+                "sgp1",
+                "lon1"
+              ],
+              "created_at":"2014-04-18T15:59:36Z"
+            },
+            "size":{
+              "slug":"512mb",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
+              "transfer":1000,
+              "price_monthly":"5.0",
+              "price_hourly":"0.00744",
+              "regions":[
+                "nyc1",
+                "sgp1",
+                "ams1",
+                "ams2",
+                "sfo1",
+                "nyc2",
+                "lon1"
+              ]
+            },
+            "locked":true,
+            "status":"new",
+            "networks":{
+              "v4":[
+                {
+                  "ip_address":"162.243.253.135",
+                  "netmask":"255.255.255.0",
+                  "gateway":"162.243.253.1",
+                  "type":"public"
+                }
+              ],
+              "v6":[]
+            },
+            "kernel":{
+              "id":1221,
+              "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
+              "version":"3.13.0-24-generic"
+            },
+            "created_at":"2014-07-17T03:19:09Z",
+            "backup_ids":[],
+            "snapshot_ids":[],
+            "action_ids":[
+              28780168
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 17 Jul 2014 03:19:32 GMT
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/droplets/2106951?per_page=999
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 17 Jul 2014 03:19:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d98fdbcb222a34c776d627391c525c3031405567182227; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 200 OK
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1152'
+      Ratelimit-Reset:
+      - '1405569875'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 768a77c1a20114119da44a2c18a8d969
+      X-Runtime:
+      - '0.152397'
+      X-Rack-Cache:
+      - miss
+      Cf-Ray:
+      - 14b34ca8ed7209d0-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "droplet":{
+            "id":2106951,
+            "name":"29-23",
+            "region":{
+              "slug":"nyc2",
+              "name":"New York 2",
+              "sizes":[
+                "1gb",
+                "2gb",
+                "4gb",
+                "8gb",
+                "16gb",
+                "32gb",
+                "48gb",
+                "64gb",
+                "512mb"
+              ],
+              "available":true,
+              "features":[
+                "virtio",
+                "private_networking",
+                "backups"
+              ]
+            },
+            "image":{
+              "id":3240036,
+              "name":"Ubuntu 14.04 x64",
+              "distribution":"Ubuntu",
+              "slug":"ubuntu-14-04-x64",
+              "public":true,
+              "regions":[
+                "nyc1",
+                "ams1",
+                "sfo1",
+                "nyc2",
+                "ams2",
+                "sgp1",
+                "lon1"
+              ],
+              "created_at":"2014-04-18T15:59:36Z"
+            },
+            "size":{
+              "slug":"512mb",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
+              "transfer":1000,
+              "price_monthly":"5.0",
+              "price_hourly":"0.00744",
+              "regions":[
+                "nyc1",
+                "sgp1",
+                "ams1",
+                "ams2",
+                "sfo1",
+                "nyc2",
+                "lon1"
+              ]
+            },
+            "locked":true,
+            "status":"new",
+            "networks":{
+              "v4":[
+                {
+                  "ip_address":"162.243.253.135",
+                  "netmask":"255.255.255.0",
+                  "gateway":"162.243.253.1",
+                  "type":"public"
+                }
+              ],
+              "v6":[]
+            },
+            "kernel":{
+              "id":1221,
+              "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
+              "version":"3.13.0-24-generic"
+            },
+            "created_at":"2014-07-17T03:19:09Z",
+            "backup_ids":[],
+            "snapshot_ids":[],
+            "action_ids":[
+              28780168
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 17 Jul 2014 03:19:42 GMT
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/droplets/2106951?per_page=999
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 17 Jul 2014 03:19:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfc849a505dd3e70d398b15501b8ab86a1405567192618; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 200 OK
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1151'
+      Ratelimit-Reset:
+      - '1405569875'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 9ca0234d48058fba5c06ac2952c3fb7c
+      X-Runtime:
+      - '0.089427'
+      X-Rack-Cache:
+      - miss
+      Cf-Ray:
+      - 14b34ce9da5c09d0-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "droplet":{
+            "id":2106951,
+            "name":"29-23",
+            "region":{
+              "slug":"nyc2",
+              "name":"New York 2",
+              "sizes":[
+                "1gb",
+                "2gb",
+                "4gb",
+                "8gb",
+                "16gb",
+                "32gb",
+                "48gb",
+                "64gb",
+                "512mb"
+              ],
+              "available":true,
+              "features":[
+                "virtio",
+                "private_networking",
+                "backups"
+              ]
+            },
+            "image":{
+              "id":3240036,
+              "name":"Ubuntu 14.04 x64",
+              "distribution":"Ubuntu",
+              "slug":"ubuntu-14-04-x64",
+              "public":true,
+              "regions":[
+                "nyc1",
+                "ams1",
+                "sfo1",
+                "nyc2",
+                "ams2",
+                "sgp1",
+                "lon1"
+              ],
+              "created_at":"2014-04-18T15:59:36Z"
+            },
+            "size":{
+              "slug":"512mb",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
+              "transfer":1000,
+              "price_monthly":"5.0",
+              "price_hourly":"0.00744",
+              "regions":[
+                "nyc1",
+                "sgp1",
+                "ams1",
+                "ams2",
+                "sfo1",
+                "nyc2",
+                "lon1"
+              ]
+            },
+            "locked":false,
+            "status":"active",
+            "networks":{
+              "v4":[
+                {
+                  "ip_address":"162.243.253.135",
+                  "netmask":"255.255.255.0",
+                  "gateway":"162.243.253.1",
+                  "type":"public"
+                }
+              ],
+              "v6":[]
+            },
+            "kernel":{
+              "id":1221,
+              "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
+              "version":"3.13.0-24-generic"
+            },
+            "created_at":"2014-07-17T03:19:09Z",
+            "backup_ids":[],
+            "snapshot_ids":[],
+            "action_ids":[
+              28780168
+            ]
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 17 Jul 2014 03:19:52 GMT
+- request:
+    method: delete
+    uri: https://api.digitalocean.com/v2/droplets/2106951
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
       Content-Type:
       - application/json
       User-Agent:
@@ -25,35 +745,35 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sun, 13 Jul 2014 20:33:11 GMT
+      - Thu, 17 Jul 2014 03:20:03 GMT
       Content-Type:
       - application/octet-stream
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4a7ed861d54e50e103e18f0f8b70b7ba1405283590934; expires=Mon, 23-Dec-2019
+      - __cfduid=d9b496b7d86838d3db6c25263b425be271405567202986; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
       - 204 No Content
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1190'
+      - '1150'
       Ratelimit-Reset:
-      - '1405285645'
+      - '1405569875'
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - dcde9339246bfa648dce3986e55a6a6d
+      - 7de9c97306e4143f275cc063a3aaf6ba
       X-Runtime:
-      - '0.100521'
+      - '0.079782'
       X-Rack-Cache:
       - invalidate, pass
       Cf-Ray:
-      - 1498410b5b3b0167-ORD
+      - 14b34d2aac6509d0-ORD
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sun, 13 Jul 2014 20:33:11 GMT
+  recorded_at: Thu, 17 Jul 2014 03:20:03 GMT
 recorded_with: VCR 2.9.2

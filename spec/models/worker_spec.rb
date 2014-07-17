@@ -32,7 +32,6 @@ describe Worker, "#spin_up!" do
   end
   
   after(:all) do
-    sleep(60)
     VCR.use_cassette(:worker_spin_up_destroy) do
       @worker.rip_down!
     end
@@ -45,11 +44,10 @@ describe Worker, "#rip_down!" do
       @worker = create(:worker)
       @worker.spin_up!
     end
-    sleep(60)
     VCR.use_cassette(:worker_rip_down_destroy) do
       @worker.rip_down!
     end
-    sleep(60)
+    sleep(10) # need to sleep to let the host catch up... lol
   end
   
   it "should destroy the worker instance" do
