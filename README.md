@@ -28,7 +28,7 @@ from `.env` are set on Heroku using `heroku config:set VARIABLE_NAME=VALUE`.
 
 ## Installed Gems
 
-### Production/Development/Test
+### General
 
 - [Awesome Print](https://github.com/michaeldv/awesome_print)
 - [Bourbon](http://bourbon.io)
@@ -44,7 +44,7 @@ from `.env` are set on Heroku using `heroku config:set VARIABLE_NAME=VALUE`.
 - [Sass-Rails](https://github.com/rails/sass-rails)
 - [Uglifier](https://github.com/lautis/uglifier)
 
-### Development/Test
+### Development & Test
 
 - [Better Errors](https://github.com/charliesome/better_errors)
 - [dotenv](https://github.com/bkeepers/dotenv)
