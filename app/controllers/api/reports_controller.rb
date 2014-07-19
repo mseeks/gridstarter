@@ -13,8 +13,9 @@ module Api
         
         if @report.errors.length == 0
           @report.tasks.each do |task_hash|
-            task = @worker.tasks.where(uid: task_hash[:uid]).first_or_create
+            task = @worker.tasks.where(uid: task_hash[:uid]).first_or_initialize
             task.progress = task_hash[:progress]
+            task.save
             
             @tasks << task
           end
