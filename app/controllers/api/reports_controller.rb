@@ -5,24 +5,16 @@ module Api
     
     # POST /api/reports.json
     def create
-      @worker = Worker.find(report_params[:meta][:worker_id])
+      @worker = Worker.find(params[:worker_id])
       @tasks = []
       
       if @worker
-        @report = Report.new(data: report_params, work_type: @worker.project.work_type)
-        
-        if @report.errors.length == 0
-          @report.tasks.each do |task_hash|
-            task = @worker.tasks.where(uid: task_hash[:uid]).first_or_initialize
-            task.progress = task_hash[:progress]
-            task.save
-            
-            @tasks << task
-          end
+        report_params[:tasks].each do |task_hash|
+          task = @worker.tasks.where(uid: task_hash[:name]).first_or_initialize
+          task.progress = task[:fraction_done] * 100.0
+          task.save
           
-          render json: @tasks, status: :success
-        else
-          render json: @report.errors, status: :unprocessable_entity
+          @tasks << task
         end
       end
     end
