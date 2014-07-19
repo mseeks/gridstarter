@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :project do
     name "LHC@home"
+    type "boinc"
   end
 end

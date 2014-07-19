@@ -6,6 +6,7 @@ FactoryGirl.define do
     user
     
     # Need to do this, otherwise the worker gets created but never destroyed as clean up.
-    after(:build) { |worker| worker.class.skip_callback(:create, :after, :spin_up!) }
+    after(:build) {|worker| worker.class.skip_callback(:create, :after, :spin_up!) }
+    after(:build) {|worker| worker.class.skip_callback(:save, :before, :set_provider!) }
   end
 end

@@ -3,7 +3,7 @@ class Worker < ActiveRecord::Base
   belongs_to :user
   has_many :tasks
   
-  before_validation :set_provider
+  before_save :set_provider!
   after_create :spin_up!
   before_destroy :rip_down!
   
@@ -29,7 +29,13 @@ class Worker < ActiveRecord::Base
       self.rip_down!
     end
   end
-  
+
+  # Decides the provider of the worker, currently just always sets 'digital_ocean'
+  # but later could act as a load balancer between many providers.
+  def set_provider!
+    self.provider ||= "digital_ocean"
+  end
+ 
   # Create the worker instance based on provider
   def spin_up!
     unless self.uid
@@ -46,11 +52,5 @@ class Worker < ActiveRecord::Base
           self.save
       end
     end
-  end
-  
-  # Decides the provider of the worker, currently just always sets 'digital_ocean'
-  # but later could act as a load balancer between many providers.
-  def set_provider
-    self.provider ||= "digital_ocean"
   end
 end

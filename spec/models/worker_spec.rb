@@ -61,3 +61,14 @@ describe Worker, "#rip_down!" do
     end
   end
 end
+
+describe Worker, "#set_provider!" do
+  before(:each) do
+    @worker = build(:worker)
+    @worker.set_provider!
+  end
+
+  it "should set the worker's provider" do
+    expect(@worker.provider).to_not be_nil
+  end
+end

@@ -7,10 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 project = Project.first_or_create({
-  name: "Folding@home"
-})
-
-project.workers.first_or_create({
-  uid: "123456",
-  provider: "digital_ocean"
+  name: "Folding@home",
+  type: "boinc"
 })
