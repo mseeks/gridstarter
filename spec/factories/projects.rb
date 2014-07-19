@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :project do
     name "LHC@home"
-    type "boinc"
+    work_type "boinc"
   end
 end

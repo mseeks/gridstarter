@@ -8,5 +8,5 @@
 
 project = Project.first_or_create({
   name: "Folding@home",
-  type: "boinc"
+  work_type: "boinc"
 })

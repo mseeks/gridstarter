@@ -9,7 +9,7 @@ class Report
     else
       @data = data
       
-      case @worker.project.type
+      case @worker.project.work_type
         when "boinc"
           @tasks = data[:tasks].map do |task|
             {
