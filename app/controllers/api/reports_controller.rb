@@ -19,7 +19,7 @@ module Api
             @tasks << task
           end
           
-          respond_with @tasks
+          render json: @tasks, status: :success
         else
           render json: @report.errors, status: :unprocessable_entity
         end
