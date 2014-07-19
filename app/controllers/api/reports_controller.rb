@@ -9,7 +9,7 @@ module Api
       @tasks = []
       
       if @worker
-        @report = Report.new(report_params)
+        @report = Report.new(data: report_params, work_type: @worker.work_type)
         
         if @report.errors.length == 0
           @report.tasks.each do |task_hash|

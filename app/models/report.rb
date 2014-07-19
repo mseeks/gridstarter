@@ -1,15 +1,16 @@
 class Report
-  attr_reader :data, :errors, :tasks
+  attr_reader :data, :errors, :tasks, :work_type
   
-  def initialize(data = nil)
+  def initialize(data: nil, work_type: nil)
     @errors = []
+    @work_type = work_type
     
     if data.nil?
       @errors << "Invalid data." if data.nil?
     else
       @data = data
       
-      case @worker.project.work_type
+      case @work_type
         when "boinc"
           @tasks = data[:tasks].map do |task|
             {
