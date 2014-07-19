@@ -1,6 +1,6 @@
 module Api
   class ReportsController < ApplicationController
-    responds_to :json
+    respond_to :json
     
     # POST /api/reports.json
     def create
