@@ -4,7 +4,7 @@ module Api
     
     # POST /api/reports.json
     def create
-      @worker = Worker.find(meta_params[:worker_id])
+      @worker = Worker.find(report_params[:meta][:worker_id])
       @tasks = []
       
       if @worker
@@ -12,7 +12,7 @@ module Api
         
         if @report.errors.length == 0
           @report.tasks.each do |task_hash|
-            task = Task.where(uid: task_hash[:uid]).first_or_create
+            task = @worker.tasks.where(uid: task_hash[:uid]).first_or_create
             task.progress = task_hash[:progress]
             
             @tasks << task
@@ -26,10 +26,6 @@ module Api
     end
     
     private
-    
-    def meta_params
-      params.require(:meta).permit(:worker_id)
-    end
     
     def report_params
       params[:report]
