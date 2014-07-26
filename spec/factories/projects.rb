@@ -3,6 +3,7 @@
 FactoryGirl.define do
   factory :project do
     name "LHC@home"
+    url "http://lhcathome.web.cern.ch"
     work_type "boinc"
   end
 end

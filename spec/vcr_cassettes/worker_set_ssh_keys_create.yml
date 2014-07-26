@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.digitalocean.com/v2/account/keys
+    body:
+      encoding: UTF-8
+      string: '{"name":"141","public_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWtt0heXqtH7LbgUHIBjZie7ZBDc9NEnU04ukEPhbLKH8LyYnV6F4YPkh0c10Vi1f+5X+AjF+uoBDtVPIV9CA/VV1oMl+UI+iEn+yeZ75Qn+WXqyQjktRcFBZVKDXGegQ7Ur8qU9tHS5V29XsyBsSRR5kt9Rc4vGV2z85bVHh8L181z24XXrB078nxpnSpvkxG1UI3fD3BrhIfVBlerZDsPmJ8Ks3AwhX8ltVqwvF+yjxcCnh1jf3Jw/mkBJG7lCNv2sXBC8Hcq52/uLL75FRTgp8J3hDBq6jT62HSg3MciJ+Z1gx7PdY1kqy0DH1Lrx5/QLIGmtW+yoXy2hXYPnnx"}'
+    headers:
+      Authorization:
+      - Bearer <TOKEN>
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sat, 26 Jul 2014 03:21:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7b6ff121604b2dd359cabf46cd59eef71406344881938; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 201 Created
+      Ratelimit-Limit:
+      - '1200'
+      Ratelimit-Remaining:
+      - '1160'
+      Ratelimit-Reset:
+      - '1406347250'
+      Etag:
+      - '"ff652cc195018b26fce1ea9bf84e80b0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a152aaf6505d037d84c0b816f7e44be5
+      X-Runtime:
+      - '0.041509'
+      X-Rack-Cache:
+      - invalidate, pass
+      Cf-Ray:
+      - 14fd77781c840167-ORD
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "ssh_key":{
+            "id":193418,
+            "fingerprint":"ea:4e:40:66:66:ff:d0:3c:45:4e:c0:60:98:e8:9d:fa",
+            "public_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWtt0heXqtH7LbgUHIBjZie7ZBDc9NEnU04ukEPhbLKH8LyYnV6F4YPkh0c10Vi1f+5X+AjF+uoBDtVPIV9CA/VV1oMl+UI+iEn+yeZ75Qn+WXqyQjktRcFBZVKDXGegQ7Ur8qU9tHS5V29XsyBsSRR5kt9Rc4vGV2z85bVHh8L181z24XXrB078nxpnSpvkxG1UI3fD3BrhIfVBlerZDsPmJ8Ks3AwhX8ltVqwvF+yjxcCnh1jf3Jw/mkBJG7lCNv2sXBC8Hcq52/uLL75FRTgp8J3hDBq6jT62HSg3MciJ+Z1gx7PdY1kqy0DH1Lrx5/QLIGmtW+yoXy2hXYPnnx",
+            "name":"141"
+          }
+        }
+    http_version: 
+  recorded_at: Sat, 26 Jul 2014 03:21:21 GMT
+recorded_with: VCR 2.9.2

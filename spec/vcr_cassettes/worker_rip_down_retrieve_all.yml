@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Thu, 17 Jul 2014 03:19:09 GMT
+      - Sat, 26 Jul 2014 03:22:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,26 +33,26 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d7497aed724cd7a0d138681a6f390aa941405567149366; expires=Mon, 23-Dec-2019
+      - __cfduid=d98d62d219abd936ce6c5f2690de4c6121406344955749; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
       - 200 OK
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1158'
+      - '1152'
       Ratelimit-Reset:
-      - '1405569875'
+      - '1406347250'
       Cache-Control:
       - must-revalidate, private, max-age=0
       X-Request-Id:
-      - 0cde95f831e490c5ace32127475021a4
+      - 395a26396bbef394c604ced9084ddd8c
       X-Runtime:
-      - '0.146794'
+      - '0.164889'
       X-Rack-Cache:
       - miss
       Cf-Ray:
-      - 14b34bdb817c09d0-ORD
+      - 14fd79456f800167-ORD
     body:
       encoding: UTF-8
       string: |
@@ -61,6 +61,9 @@ http_interactions:
             {
               "id":2070393,
               "name":"boinc",
+              "memory":512,
+              "vcpus":1,
+              "disk":20,
               "region":{
                 "slug":"nyc2",
                 "name":"New York 2",
@@ -69,11 +72,11 @@ http_interactions:
                   "2gb",
                   "4gb",
                   "8gb",
-                  "16gb",
                   "32gb",
                   "48gb",
                   "64gb",
-                  "512mb"
+                  "512mb",
+                  "16gb"
                 ],
                 "available":true,
                 "features":[
@@ -86,8 +89,8 @@ http_interactions:
                 "id":3240036,
                 "name":"Ubuntu 14.04 x64",
                 "distribution":"Ubuntu",
-                "slug":"ubuntu-14-04-x64",
-                "public":true,
+                "slug":null,
+                "public":false,
                 "regions":[
                   "nyc1",
                   "ams1",
@@ -101,21 +104,9 @@ http_interactions:
               },
               "size":{
                 "slug":"512mb",
-                "memory":512,
-                "vcpus":1,
-                "disk":20,
-                "transfer":1000,
-                "price_monthly":"5.0",
-                "price_hourly":"0.00744",
-                "regions":[
-                  "nyc1",
-                  "sgp1",
-                  "ams1",
-                  "ams2",
-                  "sfo1",
-                  "nyc2",
-                  "lon1"
-                ]
+                "transfer":1,
+                "price_monthly":5.0,
+                "price_hourly":0.00744
               },
               "locked":false,
               "status":"active",
@@ -136,9 +127,13 @@ http_interactions:
                 "version":"3.13.0-24-generic"
               },
               "created_at":"2014-07-12T16:31:41Z",
+              "features":[
+                "virtio"
+              ],
               "backup_ids":[],
               "snapshot_ids":[],
               "action_ids":[
+                29148353,
                 28488612
               ]
             }
@@ -148,5 +143,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Thu, 17 Jul 2014 03:19:09 GMT
+  recorded_at: Sat, 26 Jul 2014 03:22:35 GMT
 recorded_with: VCR 2.9.2

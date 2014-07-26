@@ -1,0 +1,50 @@
+export RUBY_VERSION=<%= RUBY_VERSION %>
+export BOINC_DRONE_VERSION=<%= BoincDrone::VERSION %>
+export BOINC_DRONE_WEBHOOK_URL=<%= Rails.application.routes.url_helpers.api_reports_url(worker_id: worker.id) %>
+export BOINC_PROJECT_URL=<%= worker.project.url %>
+export BOINC_PROJECT_KEY=<%= ('a'..'z').to_a.shuffle[0,8].join %>
+
+echo "---------------------------------------------------------"
+echo "Configuring firewall"
+echo "---------------------------------------------------------"
+ufw -f enable
+ufw allow ssh
+
+echo "---------------------------------------------------------"
+echo "Updating apt-get"
+echo "---------------------------------------------------------"
+apt-get update
+
+echo "---------------------------------------------------------"
+echo "Installing boinc-client"
+echo "---------------------------------------------------------"
+apt-get install -y boinc-client
+
+echo "---------------------------------------------------------"
+echo "Installing RVM"
+echo "---------------------------------------------------------"
+\curl -sSL https://get.rvm.io | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm reload
+
+echo "---------------------------------------------------------"
+echo "Installing Ruby"
+echo "---------------------------------------------------------"
+rvm install ruby-$RUBY_VERSION
+rvm use ruby-$RUBY_VERSION
+rvm default ruby-$RUBY_VERSION
+
+echo "---------------------------------------------------------"
+echo "Installing gems"
+echo "---------------------------------------------------------"
+gem install boinc_drone:$BOINC_DRONE_VERSION
+
+echo "---------------------------------------------------------"
+echo "Starting processing"
+echo "---------------------------------------------------------"
+boinccmd --project_attach $BOINC_PROJECT_URL $BOINC_PROJECT_KEY
+
+echo "---------------------------------------------------------"
+echo "Start reporting"
+echo "---------------------------------------------------------"
+boinc_drone -u "$BOINC_DRONE_WEBHOOK_URL"

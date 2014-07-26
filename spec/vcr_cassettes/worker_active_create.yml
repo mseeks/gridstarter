@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.digitalocean.com/v2/account/keys
     body:
       encoding: UTF-8
-      string: '{"name":"138","public_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDahRfUOrByISuUHPVGt5js08CxNlwGedO6urGH7X0PSGSvUHVP7PjGNsGYlNi11Vi46c4KurEd5SduTNb5av0dD6SdFICxr7EuxNN7aIgWkRNiEtdSF8cZU26rrEx3I9KcAPzCAQOx2HPNBuxmtvTvrPK9IZIBn0ew69JRvebInaQ5UrtTr2hPStKeiAqFLUHKpUngJKRn+CzDCBB6iO7/K0ccVmuvQmfA5IjSKHiE8kkufhzBr4ILeBQCEER7rzPSUjAdnybkRVzVx13k62vnRJRzFOeE6qJDzTcgcIT3c1sNFSBL2zXtfeDJhGvvzYm62U3LWNGHqY8+Czm3gqWn"}'
+      string: '{"name":"135","public_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCVPF2/niU8LMxoIXV3fO15SJ9v83EuPsmhhKuxUQiUtf0BI73vRKzB4FO9hpiarGtMyRKoJROrWJWvZ9cVFmtLHjnap0CweuKv3tR0vCmpp+n5BlI+t//uns67myiabQsevKxmTqNwTXeUj/nTE0gc1Wbti68U9FbT2mCO5xWhrCAqqZ5pC+cl1f8VZ73ZY77leH2mqGrR/AhPIvWEbZ/A8MJOJFshgEqQtWMqC/JVq8++afDAcyFBM4jdu4jlOfMPIyO+ZyOe6UFDvwIdpppzQu9TXEAEhZtkp3AYHgFN3C+MhgSpOCZmC8y1pr1pcwQz8Tl5B+SYX7OfK4/iER/T"}'
     headers:
       Authorization:
       - Bearer <TOKEN>
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sat, 26 Jul 2014 03:20:17 GMT
+      - Sat, 26 Jul 2014 03:17:28 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,47 +33,47 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d3334fb01e38de47c8e6907e999800a751406344817185; expires=Mon, 23-Dec-2019
+      - __cfduid=d3a60e5a15f2768a64bfd773bfd39b2e01406344648513; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
       - 201 Created
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1169'
+      - '1184'
       Ratelimit-Reset:
       - '1406347250'
       Etag:
-      - '"a3ec113555ea988c53fa5692aa41d5fd"'
+      - '"819678e211dbe7e7e4bcd63a8a417f46"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8c049d7a8de3800ecf6ff5a22d7d6cb5
+      - e01a67629828a0ce69ac82c549213145
       X-Runtime:
-      - '0.040777'
+      - '0.062258'
       X-Rack-Cache:
       - invalidate, pass
       Cf-Ray:
-      - 14fd75e3664a0167-ORD
+      - 14fd71c5360b09d0-ORD
     body:
       encoding: UTF-8
       string: |
         {
           "ssh_key":{
-            "id":193417,
-            "fingerprint":"d5:c4:5c:1a:5a:f8:72:21:1e:46:1a:78:20:5e:c2:03",
-            "public_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDahRfUOrByISuUHPVGt5js08CxNlwGedO6urGH7X0PSGSvUHVP7PjGNsGYlNi11Vi46c4KurEd5SduTNb5av0dD6SdFICxr7EuxNN7aIgWkRNiEtdSF8cZU26rrEx3I9KcAPzCAQOx2HPNBuxmtvTvrPK9IZIBn0ew69JRvebInaQ5UrtTr2hPStKeiAqFLUHKpUngJKRn+CzDCBB6iO7/K0ccVmuvQmfA5IjSKHiE8kkufhzBr4ILeBQCEER7rzPSUjAdnybkRVzVx13k62vnRJRzFOeE6qJDzTcgcIT3c1sNFSBL2zXtfeDJhGvvzYm62U3LWNGHqY8+Czm3gqWn",
-            "name":"138"
+            "id":193415,
+            "fingerprint":"88:af:2e:5f:61:50:4e:1a:01:c5:83:07:5a:06:ff:93",
+            "public_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCVPF2/niU8LMxoIXV3fO15SJ9v83EuPsmhhKuxUQiUtf0BI73vRKzB4FO9hpiarGtMyRKoJROrWJWvZ9cVFmtLHjnap0CweuKv3tR0vCmpp+n5BlI+t//uns67myiabQsevKxmTqNwTXeUj/nTE0gc1Wbti68U9FbT2mCO5xWhrCAqqZ5pC+cl1f8VZ73ZY77leH2mqGrR/AhPIvWEbZ/A8MJOJFshgEqQtWMqC/JVq8++afDAcyFBM4jdu4jlOfMPIyO+ZyOe6UFDvwIdpppzQu9TXEAEhZtkp3AYHgFN3C+MhgSpOCZmC8y1pr1pcwQz8Tl5B+SYX7OfK4/iER/T",
+            "name":"135"
           }
         }
     http_version: 
-  recorded_at: Sat, 26 Jul 2014 03:20:17 GMT
+  recorded_at: Sat, 26 Jul 2014 03:17:28 GMT
 - request:
     method: post
     uri: https://api.digitalocean.com/v2/droplets
     body:
       encoding: UTF-8
-      string: '{"name":"178-138","region":"nyc2","size":"512mb","image":"ubuntu-14-04-x64","ssh_keys":["d5:c4:5c:1a:5a:f8:72:21:1e:46:1a:78:20:5e:c2:03"]}'
+      string: '{"name":"175-135","region":"nyc2","size":"512mb","image":"ubuntu-14-04-x64","ssh_keys":["88:af:2e:5f:61:50:4e:1a:01:c5:83:07:5a:06:ff:93"]}'
     headers:
       Authorization:
       - Bearer <TOKEN>
@@ -93,7 +93,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sat, 26 Jul 2014 03:20:28 GMT
+      - Sat, 26 Jul 2014 03:17:39 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -101,33 +101,33 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d948d2c16030f4c008a63fc1656f335071406344827501; expires=Mon, 23-Dec-2019
+      - __cfduid=d4b4bedfaec2a0fdfd8a1ade4aee9b5e21406344659341; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
       - 202 Accepted
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1168'
+      - '1183'
       Ratelimit-Reset:
       - '1406347250'
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 15d1a6d560c4fe9a0248499407370d4e
+      - ea5215c4f36bad8c9a4e1fad51fae67e
       X-Runtime:
-      - '0.500835'
+      - '0.372155'
       X-Rack-Cache:
       - invalidate, pass
       Cf-Ray:
-      - 14fd7623ebb709d0-ORD
+      - 14fd7208e4cc0167-ORD
     body:
       encoding: UTF-8
       string: |
         {
           "droplet":{
-            "id":2178753,
-            "name":"178-138",
+            "id":2178744,
+            "name":"175-135",
             "memory":512,
             "vcpus":1,
             "disk":20,
@@ -183,26 +183,26 @@ http_interactions:
               "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
               "version":"3.13.0-24-generic"
             },
-            "created_at":"2014-07-26T03:20:27Z",
+            "created_at":"2014-07-26T03:17:39Z",
             "features":[
               "virtio"
             ],
             "backup_ids":[],
             "snapshot_ids":[],
             "action_ids":[
-              29443477
+              29443303
             ]
           },
           "links":{
             "actions":[
               {
-                "id":29443477,
+                "id":29443303,
                 "rel":"create",
-                "href":"http://api.digitalocean.com/v2/actions/29443477"
+                "href":"http://api.digitalocean.com/v2/actions/29443303"
               }
             ]
           }
         }
     http_version: 
-  recorded_at: Sat, 26 Jul 2014 03:20:28 GMT
+  recorded_at: Sat, 26 Jul 2014 03:17:39 GMT
 recorded_with: VCR 2.9.2

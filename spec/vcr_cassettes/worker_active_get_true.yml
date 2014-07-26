@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://api.digitalocean.com/v2/droplets
+    method: get
+    uri: https://api.digitalocean.com/v2/droplets/2178744?per_page=999
     body:
-      encoding: UTF-8
-      string: '{"name":"183-142","region":"nyc2","size":"512mb","image":"ubuntu-14-04-x64","ssh_keys":[null]}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Authorization:
       - Bearer <TOKEN>
@@ -19,13 +19,13 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 202
-      message: Accepted
+      code: 200
+      message: OK
     headers:
       Server:
       - cloudflare-nginx
       Date:
-      - Sat, 26 Jul 2014 03:21:32 GMT
+      - Sat, 26 Jul 2014 03:18:40 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,33 +33,33 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d19a07ea26a866bf3fb71e212806970e71406344892181; expires=Mon, 23-Dec-2019
+      - __cfduid=d705bf8caaa7eea9bb2ca560f6eb245071406344720507; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.digitalocean.com; HttpOnly
       Status:
-      - 202 Accepted
+      - 200 OK
       Ratelimit-Limit:
       - '1200'
       Ratelimit-Remaining:
-      - '1159'
+      - '1182'
       Ratelimit-Reset:
       - '1406347250'
       Cache-Control:
-      - no-cache
+      - must-revalidate, private, max-age=0
       X-Request-Id:
-      - 48cb31908df5a076ac973c3b3c6e2702
+      - 2de0bf002afdf91284ba527e05f7ffe5
       X-Runtime:
-      - '0.301187'
+      - '0.105293'
       X-Rack-Cache:
-      - invalidate, pass
+      - miss
       Cf-Ray:
-      - 14fd77b829c009d0-ORD
+      - 14fd73872e0409d0-ORD
     body:
       encoding: UTF-8
       string: |
         {
           "droplet":{
-            "id":2178756,
-            "name":"183-142",
+            "id":2178744,
+            "name":"175-135",
             "memory":512,
             "vcpus":1,
             "disk":20,
@@ -107,34 +107,35 @@ http_interactions:
               "price_monthly":5.0,
               "price_hourly":0.00744
             },
-            "locked":true,
-            "status":"new",
-            "networks":{},
+            "locked":false,
+            "status":"active",
+            "networks":{
+              "v4":[
+                {
+                  "ip_address":"107.170.119.180",
+                  "netmask":"255.255.240.0",
+                  "gateway":"107.170.112.1",
+                  "type":"public"
+                }
+              ],
+              "v6":[]
+            },
             "kernel":{
               "id":1221,
               "name":"Ubuntu 14.04 x64 vmlinuz-3.13.0-24-generic (1221)",
               "version":"3.13.0-24-generic"
             },
-            "created_at":"2014-07-26T03:21:32Z",
+            "created_at":"2014-07-26T03:17:39Z",
             "features":[
               "virtio"
             ],
             "backup_ids":[],
             "snapshot_ids":[],
             "action_ids":[
-              29443498
-            ]
-          },
-          "links":{
-            "actions":[
-              {
-                "id":29443498,
-                "rel":"create",
-                "href":"http://api.digitalocean.com/v2/actions/29443498"
-              }
+              29443303
             ]
           }
         }
     http_version: 
-  recorded_at: Sat, 26 Jul 2014 03:21:32 GMT
+  recorded_at: Sat, 26 Jul 2014 03:18:40 GMT
 recorded_with: VCR 2.9.2
